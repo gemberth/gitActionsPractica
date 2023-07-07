@@ -7,6 +7,7 @@ RUN npm run build
 FROM node:19.2-alpine3.16 as Deps-Produ
 WORKDIR /app
 COPY package.json ./
+
 RUN npm install --prod
 
 FROM node:19.2-alpine3.16 as Produccion
