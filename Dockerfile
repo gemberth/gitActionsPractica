@@ -10,6 +10,7 @@ COPY package.json ./
 
 RUN npm install --prod
 
+
 FROM node:19.2-alpine3.16 as Produccion
 WORKDIR /app
 COPY --from=Build /app/dist ./dist
