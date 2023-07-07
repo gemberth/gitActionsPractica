@@ -1,0 +1,34 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Doctor {
+  id: ID!
+  identificacion: String!
+  nombre: String!
+  estado: Boolean!
+}
+
+type Query {
+  doctors: [Doctor!]!
+  doctor(id: ID!): Doctor!
+}
+
+type Mutation {
+  createDoctor(createDoctorInput: CreateDoctorInput!): Doctor!
+  updateDoctor(updateDoctorInput: UpdateDoctorInput!): Doctor!
+  removeDoctor(id: ID!): Doctor!
+}
+
+input CreateDoctorInput {
+  identificacion: String!
+  nombre: String!
+  estado: Boolean!
+}
+
+input UpdateDoctorInput {
+  identificacion: String
+  nombre: String
+  estado: Boolean
+  id: ID!
+}
